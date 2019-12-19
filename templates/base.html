@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Blogs of Yo Life</title>
+
+        <style type="text/css">
+            .error {
+                color: purple;
+            }
+        </style>
+    </head>
+    <body>
+            <h2><a href='/blog'>Main</a>
+                <a href='/newpost'>Add Some Blogs</a>
+                <a href='/'>Home</a>
+            </h2>
+
+            <div style='float: right'>
+                {% if 'user' in session %}
+                  {{ session['user'] }}
+                  <form action="/logout" method="post" id='logout'>
+                    <input type="submit" value="Log Out" />
+                  </form>
+                {% else %}
+                  <a href="login">login</a> | <a href="signup">signup yo</a>
+                {% endif %}
+              </div>
+              <h1>
+        {% block content %}
+        
+        {% endblock %}
+
+    </body>
+</html>

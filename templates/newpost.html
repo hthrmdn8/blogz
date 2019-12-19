@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block content %}
+<body>
+   <form action='/newpost' method='POST'>
+    <label for='title'>Title for your new blog: </label>
+        <br>
+        <input id='title' name='title' type='text'>
+        <span class="error">{{ title_error }}</span>
+    <p>
+    <label for='body'>New Blog Post:</label>
+        <br>
+        <textarea id='body' name='body' rows=”35” cols=”70”></textarea>
+        <span class="error">{{ body_error }}</span>
+    </p>
+    <p>
+        <input type='submit' value='Finished'>
+    </p>
+    </form>
+    
+
+</body>
+
+
+{% if error %}
+<p class='error'>{{ error }}</p>
+{% endif %}
+
+
+
+{% endblock %}
