@@ -1,5 +1,4 @@
 {% extends "base.html" %}
-
 {% block content %}
 
 <h1>Blog Users</h1>
@@ -9,26 +8,14 @@
 {% else %}
 
     <ul>
-        {% for user in username %}
-        <strong><h2><li><a href="/blog?user={{user.username}}">{{user.username}}</a></h2></strong>
- 
-
+        {% for user in users %}
+        <li>
+            <strong><h2><a href="/blogs?user={{user.username}}">{{user.username}}</a></h2></strong>
         </li>
         {% endfor %}
     </ul>
 
     <p>I'm Telling Everyone You Know All Of Your Secrets<p>
 
-
-            </li>
-           
-        </ul>
-
-    {% endif %}
-
-    <hr />
-
-
-
-
+{% endif %}
 {% endblock %}

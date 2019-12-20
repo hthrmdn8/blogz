@@ -10,9 +10,10 @@
         </style>
     </head>
     <body>
-            <h2><a href='/blog'>Main</a>
-                <a href='/newpost'>Add Some Blogs</a>
-                <a href='/'>Home</a>
+            <h2>
+              <a href='/'>Home</a>
+              <a href='/blogs'>Main</a>
+              <a href='/newpost'>Add Some Blogs</a>
             </h2>
 
             <div style='float: right'>
@@ -26,8 +27,8 @@
                 {% endif %}
               </div>
               <h1>
+
         {% block content %}
-        
         {% endblock %}
 
     </body>

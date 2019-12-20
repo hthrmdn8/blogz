@@ -1,6 +1,6 @@
 {% extends "base.html" %}
-
 {% block content %}
+
 <body>
    <form action='/newpost' method='POST'>
     <label for='title'>Title for your new blog: </label>
@@ -17,15 +17,10 @@
         <input type='submit' value='Finished'>
     </p>
     </form>
-    
-
 </body>
-
 
 {% if error %}
 <p class='error'>{{ error }}</p>
 {% endif %}
-
-
 
 {% endblock %}
